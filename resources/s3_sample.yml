@@ -1,0 +1,8 @@
+# ResourcesはCloudFormationの記法を利用する
+# 頭に必ずResourcesをつける必要がある
+Resources:
+  S3Bucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: sampleS3-${self:provider.stage}
+    DeletionPolicy: Retain
