@@ -1,5 +1,5 @@
 # sls_samples
-`[Serverless Framework]初めの一歩の次を踏み出すための勘所`
+`[Serverless Framework]"はじめの一歩"の次を踏み出すポイント`
 にて解説を行ったServerless Frameworkプロジェクト。
 
 - /doc
