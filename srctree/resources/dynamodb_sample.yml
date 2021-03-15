@@ -1,0 +1,17 @@
+# ResourcesはCloudFormationの記法を利用する
+# 頭に必ずResourcesをつける必要がある
+Resources:
+  sampleDynamoDB:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      # TableNameにはステージ名を追加しておくことで複数環境のデプロイ時も問題なくなる
+      TableName: sampleDB-${self:provider.stage}
+      AttributeDefinitions:
+        - AttributeName: id
+          AttributeType: N
+      KeySchema:
+        - AttributeName: id
+          KeyType: HASH
+      ProvisionedThroughput:
+        ReadCapacityUnits: 1
+        WriteCapacityUnits: 1
